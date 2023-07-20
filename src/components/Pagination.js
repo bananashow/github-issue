@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const Pagenation = ({ currentPage, setCurrentPage }) => {
+export const Pagination = ({ currentPage, setCurrentPage }) => {
   const MAX_PAGE = 10;
 
   return (
-    <PagenationContainer>
+    <PaginationContainer>
       <PrevNextButton
         disabled={currentPage === 1}
         onClick={() => setCurrentPage(currentPage - 1)}
@@ -31,7 +31,7 @@ export const Pagenation = ({ currentPage, setCurrentPage }) => {
       >
         {"Next >"}
       </PrevNextButton>
-    </PagenationContainer>
+    </PaginationContainer>
   );
 };
 
@@ -65,7 +65,7 @@ const PrevNextButton = styled(PageButtons)`
   }
 `;
 
-const PagenationContainer = styled.section`
+const PaginationContainer = styled.section`
   display: flex;
   justify-content: center;
   margin-top: 18px;
